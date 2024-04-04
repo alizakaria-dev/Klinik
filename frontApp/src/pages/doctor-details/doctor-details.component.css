@@ -1,0 +1,89 @@
+.doctor-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 10rem;
+  gap: 2rem;
+  font-family: "Open Sans", sans-serif;
+  background-color: #eff5ff;
+  padding: 3rem;
+  font-size: 1.6rem;
+  color: #1b2c51;
+}
+
+.image {
+  max-height: 30rem;
+  overflow: hidden;
+  justify-self: end;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.details p {
+  max-width: 30rem;
+  text-align: justify;
+}
+
+.image {
+  position: relative;
+}
+
+.image img {
+  height: 100%;
+}
+
+.delete-btn {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1b2c51;
+  border: none;
+  border-radius: 50%;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.icons {
+  display: flex;
+  gap: 3rem;
+}
+
+.toggle-btn {
+  padding: 0rem 3rem;
+  background-color: transparent;
+  color: #1b2c51;
+  border-radius: 10px;
+  border-color: #0463fa;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.toggle-btn:hover {
+  background-color: #0463fa;
+}
+
+.update-btn {
+  height: 2rem;
+  background-color: #0463fa;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

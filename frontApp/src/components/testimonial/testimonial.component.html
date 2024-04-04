@@ -1,0 +1,104 @@
+<!-- <section class="testimonial-section">
+  <div class="testimonial-container container">
+    <p class="section-title">Testimonial</p>
+    <h1 class="testimonial-heading">What Our Patients Say</h1>
+    <div class="testimonial-card">
+      <div class="test">
+         @for(t of testimonials; track t.image){
+        <div class="upper-section">
+          <i class="fa-solid fa-arrow-left icon-left icon"></i>
+          <div class="patient-image">
+            <img [src]="t.image" alt="" />
+          </div>
+          <i class="fa-solid fa-arrow-right icon-right icon"></i>
+        </div>
+
+        <div class="text">
+          <p>
+            {{ t.text }}
+          </p>
+          <p class="name">{{ t.name }}</p>
+          <p class="profession">{{ t.profession }}</p>
+        </div>
+        }
+
+        <div class="upper-section">
+          <i class="fa-solid fa-arrow-left icon-left icon"></i>
+          <div class="patient-image">
+            <img src="../../assets/testimonial-1.jpg" alt="" />
+          </div>
+          <i class="fa-solid fa-arrow-right icon-right icon"></i>
+        </div>
+
+        <div class="text">
+          <p>text</p>
+          <p class="name">name</p>
+          <p class="profession">profession</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="testimonial-section">
+  <div class="testimonial-container container">
+    <p class="section-title">Testimonial</p>
+    <h1 class="testimonial-heading">What Our Patients Say</h1>
+    <div class="testimonial-card">
+      <div class="upper-section">
+        <i class="fa-solid fa-arrow-left icon-left icon"></i>
+        <div class="patient-image">
+          <img src="../../assets/testimonial-1.jpg" alt="" />
+        </div>
+        <i class="fa-solid fa-arrow-right icon-right icon"></i>
+      </div>
+      <div class="text-section">
+        <div class="text">
+          <p>text</p>
+          <p class="name">name</p>
+          <p class="profession">profession</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="testimonial-section">
+  <div class="testimonial-container container">
+    <p class="section-title">Testimonial</p>
+    <h1 class="testimonial-heading">What Our Patients Say</h1>
+    <div class="flex-container">
+      @for(t of testimonials; track t.TESTIMONIALID; let i = $index){
+      <div
+        class="testimonial-card"
+        [ngClass]="{
+          active: selectedIndex === i,
+          'move-left': animationDirection === 'left',
+          'move-right': animationDirection === 'right'
+        }"
+      >
+        <div class="upper-section">
+          <i
+            class="fa-solid fa-arrow-left icon-left icon"
+            (click)="onPrevClick()"
+          ></i>
+          <div class="patient-image">
+            <img [src]="t.File.URL" alt="" />
+          </div>
+          <i
+            class="fa-solid fa-arrow-right icon-right icon"
+            (click)="onNextClick()"
+          ></i>
+        </div>
+        <div class="text-section">
+          <div class="text">
+            <p>{{ t.DESCRIPTION }}</p>
+            <p class="name">{{ t.USERNAME }}</p>
+            <p class="profession">{{ t.PROFESSION }}</p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

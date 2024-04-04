@@ -1,0 +1,94 @@
+.aboutus-section {
+  margin: 4.8rem 0;
+}
+
+.aboutus-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  gap: 5rem;
+}
+
+.aboutus-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-img {
+  width: 75%;
+  align-self: flex-end;
+}
+
+.second-img {
+  width: 50%;
+  margin-top: -25%;
+  border: 2rem solid #fff;
+  border-radius: 5px;
+}
+
+.aboutus-title {
+  font-family: "Open Sans", sans-serif;
+  color: #8d8e92;
+  font-size: 1.6rem;
+  display: inline-block;
+  border-radius: 5rem;
+  border: 1px solid #c7dcfb;
+  padding: 0.4rem 2.4rem;
+  margin-bottom: 1.6rem;
+  margin-top: 0;
+}
+
+.aboutus-heading {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.8rem;
+  color: #1b2c51;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.aboutus-info {
+  font-family: "Open Sans", sans-serif;
+  color: #8d8e92;
+  font-size: 1.6rem;
+  margin-bottom: 2.4rem;
+  padding-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-item {
+  color: #8d8e92;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+}
+
+.feature-item i {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #0463fa;
+  margin-right: 1.5rem;
+}
+
+.about-us-btn {
+  background-color: #0463fa;
+  border-radius: 5rem;
+  color: #fff;
+  padding: 1.6rem 4.8rem;
+  font-size: 1.6rem;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 1000px) {
+  .aboutus-container {
+    grid-template-columns: 1fr;
+  }
+}

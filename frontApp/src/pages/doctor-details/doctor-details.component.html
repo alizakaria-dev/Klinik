@@ -1,0 +1,85 @@
+@if(doctor){ @if(!toggleEditMode){
+<div class="doctor-details container">
+  <div class="image">
+    @if(doctor.Files){
+    <img [src]="doctor.Files[0].URL" alt="" srcset="" />
+    }@else{
+    <img src="../../assets/image-not-found.jpg" alt="" srcset="" />
+    }
+  </div>
+  <div class="details">
+    <h1>{{ doctor.NAME }}</h1>
+    <h3>{{ doctor.DEPARTMENT }}</h3>
+    <p>{{ doctor.DESCRIPTION }}</p>
+    <div class="icons">
+      <app-icon
+        [icon]="'fab fa-facebook-f'"
+        [iconContainerSize]="'icon-container-md'"
+        [iconSize]="'icon-md'"
+        [cursorPointer]="'pointer-cursor'"
+      ></app-icon>
+      <app-icon
+        [icon]="'fab fa-twitter'"
+        [iconContainerSize]="'icon-container-md'"
+        [iconSize]="'icon-md'"
+        [cursorPointer]="'pointer-cursor'"
+      ></app-icon>
+      <app-icon
+        [icon]="'fab fa-instagram'"
+        [iconContainerSize]="'icon-container-md'"
+        [iconSize]="'icon-md'"
+        [cursorPointer]="'pointer-cursor'"
+      ></app-icon>
+      <button class="toggle-btn" (click)="ToggleEditMode()">Edit</button>
+      <!-- <app-icon
+        [icon]="'fa-solid fa-pen-to-square'"
+        [iconContainerSize]="'icon-container-md'"
+        [iconSize]="'icon-md'"
+        [cursorPointer]="'pointer-cursor'"
+      ></app-icon> -->
+    </div>
+  </div>
+</div>
+}@else{
+<div class="doctor-details container">
+  <div class="image">
+    @if(doctor.Files){
+    <img [src]="doctor.Files[0].URL" alt="" srcset="" />
+    }@else{
+    <img src="../../assets/image-not-found.jpg" alt="" srcset="" />
+    }
+    <div>
+      <button class="delete-btn" (click)="DeleteFile(doctor.Files[0].FILEID)">
+        X
+      </button>
+    </div>
+  </div>
+  <div class="details">
+    <app-input
+      [type]="'text'"
+      [placeholder]="'name'"
+      [(ngModel)]="name"
+    ></app-input>
+    <app-input
+      [type]="'text'"
+      [placeholder]="'department'"
+      [(ngModel)]="department"
+    ></app-input>
+    <app-input
+      [type]="'text'"
+      [placeholder]="'description'"
+      [(ngModel)]="description"
+    ></app-input>
+    <app-input
+      [type]="'file'"
+      [placeholder]="'add file'"
+      (change)="onChange($event)"
+    ></app-input>
+    <button class="update-btn" (click)="UpdateDoctor()">Update</button>
+  </div>
+</div>
+} } @if(!toggleEditMode){
+<!-- <button (click)="ToggleEditMode()">Edit</button> -->
+}@else{
+<!-- <button (click)="UpdateDoctor()">Update</button> -->
+}

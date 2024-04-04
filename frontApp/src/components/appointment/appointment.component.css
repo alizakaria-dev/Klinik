@@ -1,0 +1,133 @@
+.appointment-section {
+  margin-top: 4.8rem;
+}
+
+.appointment-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.appointment-title {
+  font-family: "Open Sans", sans-serif;
+  color: #8d8e92;
+  font-size: 1.6rem;
+  display: inline-block;
+  border-radius: 5rem;
+  border: 1px solid #c7dcfb;
+  padding: 0.4rem 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.appointment-heading {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.8rem;
+  color: #1b2c51;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.appointment-text {
+  margin-bottom: 2.4rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #8d8e92;
+  line-height: 1.5;
+}
+
+.call-us,
+.mail-us {
+  display: flex;
+  background-color: #eff5ff;
+  align-items: center;
+  padding: 3rem;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.phone-icon {
+  width: 6rem;
+  height: 6rem;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-icon i {
+  color: #0463fa;
+  font-size: 1.6rem;
+  transform: scaleX(-1);
+}
+
+.call-us-text {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #8d8e92;
+}
+
+.phone-number {
+  font-size: 2rem;
+  color: #1b2c51;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.appointment-form {
+  background-color: #eff5ff;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem;
+}
+
+.appointment-form textarea {
+  border: #fff;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.appointment-form textarea::placeholder {
+  color: #8d8e92;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  padding: 2rem;
+}
+
+.appointment-form textarea:focus {
+  border: 2px solid #0463fa;
+}
+
+.book-appointment-btn {
+  background-color: #0463fa;
+  padding: 1.6rem 1.2rem;
+  border-radius: 7px;
+  grid-column: 1/-1;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1000px) {
+  .appointment-container {
+    grid-template-columns: 1fr;
+  }
+
+  textarea {
+    grid-column: 1/ -1;
+  }
+
+  input {
+    height: 5rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .appointment-form {
+    grid-template-columns: 1fr;
+  }
+}

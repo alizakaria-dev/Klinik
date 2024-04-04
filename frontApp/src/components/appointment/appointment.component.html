@@ -1,0 +1,131 @@
+<section class="appointment-section">
+  <div class="appointment-container container">
+    <div class="appointment-info">
+      <p class="section-title">Appointment</p>
+      <p class="appointment-heading">
+        Make An Appointment To Visit Our Doctors
+      </p>
+      <p class="appointment-text">
+        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
+        amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit
+        clita duo justo magna dolore erat amet
+      </p>
+      <div class="call-us">
+        <div class="phone-icon"><i class="fa fa-phone-alt"></i></div>
+        <div class="call-us-info">
+          <p class="call-us-text">Call Us Now</p>
+          <p class="phone-number">+012 345 6789</p>
+        </div>
+      </div>
+
+      <div class="mail-us">
+        <div class="phone-icon"><i class="fa fa-envelope-open"></i></div>
+        <div class="call-us-info">
+          <p class="call-us-text">Mail Us Now</p>
+          <p class="phone-number">info&#64;example.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="appointment-form">
+      <app-input
+        [type]="'text'"
+        [placeholder]="'name'"
+        [(ngModel)]="name"
+        [inputName]="'name'"
+      ></app-input>
+      <app-input
+        [type]="'email'"
+        [placeholder]="'Your Email'"
+        [(ngModel)]="email"
+      ></app-input>
+      <app-input
+        type="'tel'"
+        placeholder="Your Mobile"
+        [(ngModel)]="mobile"
+      ></app-input>
+      <app-input
+        type="text"
+        placeholder="Chose Doctor"
+        [(ngModel)]="doctor"
+      ></app-input>
+      <app-input
+        placeholder="Chose Date"
+        type="date"
+        [(ngModel)]="date"
+      ></app-input>
+      <app-input
+        placeholder="Chose Time"
+        type="time"
+        [(ngModel)]="time"
+      ></app-input>
+      <textarea
+        cols="30"
+        rows="10"
+        placeholder="Describe Your Problem"
+        [(ngModel)]="description"
+      ></textarea>
+      <button
+        [disabled]="isFormLoading"
+        class="book-appointment-btn"
+        (click)="SendAppointmentObject()"
+      >
+        Book Appointment
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- <input
+        type="text"
+        placeholder="Your Name"
+        [(ngModel)]="name"
+        [disabled]="isFormLoading"
+      />
+      <input
+        type="text"
+        placeholder="Your Email"
+        [(ngModel)]="email"
+        [disabled]="isFormLoading"
+      />
+      <input
+        type="text"
+        placeholder="Your Mobile"
+        [(ngModel)]="mobile"
+        [disabled]="isFormLoading"
+      />
+      <input
+        type="text"
+        placeholder="Chose Doctor"
+        [(ngModel)]="doctor"
+        [disabled]="isFormLoading"
+      />
+      <input
+        placeholder="Chose Date"
+        type="text"
+        onfocus="(this.type='date')"
+        onblur="(this.type='text')"
+        [(ngModel)]="date"
+        [disabled]="isFormLoading"
+      />
+      <input
+        placeholder="Chose Time"
+        type="text"
+        onfocus="(this.type='time')"
+        onblur="(this.type='text')"
+        [(ngModel)]="time"
+        [disabled]="isFormLoading"
+      />
+      <textarea
+        cols="30"
+        rows="10"
+        placeholder="Describe Your Problem"
+        [(ngModel)]="description"
+        [disabled]="isFormLoading"
+      ></textarea>
+      <button
+        [disabled]="isFormLoading"
+        class="book-appointment-btn"
+        (click)="SendAppointmentObject()"
+      >
+        Book Appointment
+      </button> -->

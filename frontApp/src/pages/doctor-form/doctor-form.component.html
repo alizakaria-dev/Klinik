@@ -1,0 +1,40 @@
+<div class="form">
+  <div class="form-container">
+    <app-input
+      [type]="'text'"
+      [placeholder]="'name'"
+      [(ngModel)]="name"
+    ></app-input>
+    <app-input
+      [type]="'text'"
+      [placeholder]="'department'"
+      [(ngModel)]="department"
+    ></app-input>
+    <app-input
+      [type]="'text'"
+      [placeholder]="'facebook Link'"
+      [(ngModel)]="facebookLink"
+    ></app-input>
+    <app-input
+      [type]="'text'"
+      [placeholder]="'instagram Link'"
+      [(ngModel)]="instagramLink"
+    ></app-input>
+    <app-input
+      [type]="'text'"
+      [placeholder]="'twitter Link'"
+      [(ngModel)]="twitterLink"
+    ></app-input>
+    <app-input
+      [type]="'text'"
+      [placeholder]="'description'"
+      [(ngModel)]="description"
+    ></app-input>
+    <app-input
+      [type]="'file'"
+      [placeholder]="'add file'"
+      (change)="onChange($event)"
+    ></app-input>
+    <button class="book-appointment-btn" (click)="Upload()">Add Doctor</button>
+  </div>
+</div>

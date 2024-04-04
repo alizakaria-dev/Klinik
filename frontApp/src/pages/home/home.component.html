@@ -1,0 +1,15 @@
+<app-info [info]="info()"></app-info>
+<app-about></app-about>
+<app-healthcare [services]="services()"></app-healthcare>
+<app-feature [feature]="features()"></app-feature>
+<app-doctor
+  [doctors]="doctors()"
+  (doctorId)="onDoctorSelected($event)"
+  [roleId]="roleId"
+></app-doctor>
+<app-appointment
+  (appointmentObject)="RecievedAppointmentObject($event)"
+  [isFormLoading]="isFormLoading"
+></app-appointment>
+<app-testimonial [testimonials]="testimonials()"></app-testimonial>
+<app-footer></app-footer>

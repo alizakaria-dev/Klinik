@@ -1,0 +1,38 @@
+<form
+  class="form-container"
+  [formGroup]="testimonialsForm"
+  (ngSubmit)="onSubmit(testimonialsForm)"
+>
+  <input formControlName="USERNAME" type="text" placeholder="enter username" />
+  @if(testimonialsForm.get('USERNAME').invalid &&
+  (testimonialsForm.get('USERNAME').dirty ||
+  testimonialsForm.get('USERNAME').touched)){
+  <p>Field must contain at least 3 characters</p>
+  }
+  <input
+    formControlName="PROFESSION"
+    type="text"
+    placeholder="enter profession"
+  />
+  @if(testimonialsForm.get('PROFESSION').invalid &&
+  (testimonialsForm.get('PROFESSION').dirty ||
+  testimonialsForm.get('PROFESSION').touched)){
+  <p>Field is required</p>
+  }
+  <textarea
+    name=""
+    id=""
+    cols="30"
+    rows="10"
+    placeholder="enter description"
+    formControlName="DESCRIPTION"
+  ></textarea>
+  @if(testimonialsForm.get('DESCRIPTION').invalid &&
+  (testimonialsForm.get('DESCRIPTION').dirty ||
+  testimonialsForm.get('DESCRIPTION').touched)){
+  <p>Field must contain at max 200 characters</p>
+  }
+  <input type="file" name="" id="" (change)="onChange($event)" />
+
+  <button [disabled]="testimonialsForm.invalid">Submit</button>
+</form>

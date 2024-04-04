@@ -1,0 +1,128 @@
+.title-container {
+  text-align: center;
+}
+
+.services-title {
+  font-family: "Open Sans", sans-serif;
+  color: #8d8e92;
+  font-size: 1.6rem;
+  display: inline-block;
+  border-radius: 5rem;
+  border: 1px solid #c7dcfb;
+  padding: 0.4rem 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+.services-heading {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.8rem;
+  color: #1b2c51;
+  font-weight: 700;
+}
+
+.services {
+  padding: 4.8rem 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  gap: 2.5rem;
+}
+
+.service {
+  background-color: #eff5ff;
+  padding: 4.8rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.icon {
+  width: 6.5rem;
+  height: 6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.icon i {
+  color: #0463fa;
+  font-size: 2.5rem;
+}
+
+.service h4 {
+  font-size: 2.4rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 1.6rem;
+  color: #1b2c51;
+  margin-top: 2.4rem;
+}
+
+.service p {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 2.4rem;
+  color: #8d8e92;
+  line-height: 1.5;
+}
+
+.read-more {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 5rem;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.plus-sign {
+  color: #0463fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+}
+
+.plus-sign i {
+  margin-left: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.read-more-text {
+  position: absolute;
+  left: 4rem;
+  margin: 0;
+  padding: 0;
+  top: 0.8rem;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #8d8e92;
+}
+
+.service:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.08);
+}
+
+.service:hover .read-more {
+  width: 14rem;
+}
+
+@media (max-width: 1000px) {
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}

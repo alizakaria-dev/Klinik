@@ -1,0 +1,33 @@
+<section class="doctors-section">
+  <div class="doctors-container">
+    <div class="section-heading">
+      <p class="section-title">Doctors</p>
+      <p class="doctors-heading">Our Experienced Doctors</p>
+    </div>
+    <div class="doctors container">
+      @for(doctor of doctors; track doctor.DOCTORID){
+      <div class="doctor" [routerLink]="['/doctordetails', doctor.DOCTORID]">
+        @if(roleId && roleId === 3){
+        <button class="delete-btn" (click)="SendId(doctor.DOCTORID)">X</button>
+        }
+        <div class="doctor-img">
+          <img [src]="doctor.Files[0].URL" alt="" srcset="" />
+        </div>
+        <div class="doctor-info">
+          <h5>{{ doctor.NAME }}</h5>
+          <p>{{ doctor.DEPARTMENT }}</p>
+          <ul class="social-media-list">
+            <li class="list-icons">
+              <a [href]="doctor.FACEBOOKLINK"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li class="list-icons"><i class="fab fa-twitter"></i></li>
+            <li class="list-icons"><i class="fab fa-instagram"></i></li>
+          </ul>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

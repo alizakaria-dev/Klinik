@@ -1,0 +1,108 @@
+footer {
+  background-color: #1b2c51;
+  margin-top: 10rem;
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 4.8rem 1.2rem;
+}
+
+.footSectionTitle {
+  margin-bottom: 1rem;
+}
+
+.sectionStyling {
+  color: #eff5ff;
+  font-family: "Open Sans", sans-serif;
+}
+
+footer ul {
+  list-style: none;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.sectionList {
+  padding: 0;
+}
+
+.sectionList li {
+  margin-bottom: 1.5rem;
+}
+
+.sectionList i {
+  margin-right: 2rem;
+}
+
+.sectionIcons {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sectionIcons li {
+  transition: all 0.3s ease-in;
+}
+
+.sectionIcons li i {
+  transition: all 0.3s ease-in;
+}
+
+.sectionIcons li:hover {
+  background-color: #eff5ff;
+}
+
+.sectionIcons li:hover i {
+  color: #0463fa;
+}
+
+.footerIconItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.footerServiceItem {
+  transition: all 0.1s ease-in;
+}
+
+.footerServiceItem:hover {
+  color: #0463fa;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .sectionItem {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footerContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sectionItem {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .footerContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter {
+    grid-column: -2/-1;
+  }
+}

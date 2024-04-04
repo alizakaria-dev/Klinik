@@ -1,0 +1,37 @@
+<section class="nav-section">
+  <nav>
+    <div class="logo" [routerLink]="['']">
+      <i class="far fa-hospital"></i>
+      <h1 class="logo-header">Klinik</h1>
+    </div>
+    <div class="nav-items">
+      <ul class="nav-list" [ngClass]="{ 'show-nav-items': isNavToggled }">
+        <li class="nav-item" [routerLink]="['']">HOME</li>
+        @if(roleId && roleId == 3){
+        <li class="nav-item" [routerLink]="['appointments']">Appointments</li>
+        }
+        <li class="nav-item">SERVICE</li>
+        @if(roleId && roleId == 3){
+        <li class="nav-item" [routerLink]="['doctorform']">Add Doctor</li>
+        }
+        <li class="nav-item" [routerLink]="['testimonialform']">
+          Add Testimonial
+        </li>
+        <li class="nav-item">CONTACT</li>
+      </ul>
+      @if(localStorageValue){
+      <div class="nav-item appointment-btn" (click)="RemoveToken()">
+        <span>Logout</span>
+      </div>
+      }@else{
+      <div class="nav-item appointment-btn" [routerLink]="['/login']">
+        <span>Login</span>
+      </div>
+      }
+
+      <div class="burger-icon" (click)="toggleNav()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+</section>

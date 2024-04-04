@@ -1,0 +1,17 @@
+@if(type =='file'){
+<input
+  class="input"
+  [type]="type"
+  [placeholder]="placeholder"
+  (ngModelChange)="onChange($event)"
+/>
+}@else{
+<input
+  class="input"
+  [type]="type"
+  [placeholder]="placeholder"
+  [(ngModel)]="inputValue"
+  (ngModelChange)="onChange($event)"
+/>
+
+}

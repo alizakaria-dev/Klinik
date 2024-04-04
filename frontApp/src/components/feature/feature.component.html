@@ -1,0 +1,30 @@
+<section class="features-section">
+  <div class="features-container">
+    <div class="features-texts">
+      <p class="features-title">Features</p>
+      <h1 class="features-heading">{{ feature.TITLE }}</h1>
+      <p class="features-info">
+        {{ feature.TEXT }}
+      </p>
+      <div class="feature-icons">
+        @for(featureItem of feature.FEATUREITEMS; track
+        featureItem.FEATUREITEMID){
+        <div class="icon-item">
+          <app-icon
+            [icon]="featureItem.ICON"
+            [iconContainerSize]="'icon-container-md'"
+            [iconSize]="'icon-md'"
+          ></app-icon>
+          <div class="icon-texts">
+            <p class="text-one">{{ featureItem.TEXTONE }}</p>
+            <p class="text-two">{{ featureItem.TEXTTWO }}</p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    <div class="img-container">
+      <img src="../../assets/feature.jpg" alt="" />
+    </div>
+  </div>
+</section>

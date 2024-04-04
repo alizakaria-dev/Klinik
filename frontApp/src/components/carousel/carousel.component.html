@@ -1,0 +1,46 @@
+<!-- <owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide
+    ><img src="../../assets/carousel-1.jpg" alt=""
+  /></ng-template>
+  <ng-template carouselSlide
+    ><img src="../../assets/carousel-2.jpg" alt=""
+  /></ng-template>
+  <ng-template carouselSlide
+    ><img src="../../assets/carousel-3.jpg" alt=""
+  /></ng-template>
+</owl-carousel-o> -->
+
+<div class="carousel-container">
+  @for(image of images; track image.imageAlt; let i = $index){
+  <img
+    class="fade"
+    [src]="image.imageSrc"
+    [alt]="image.imageAlt"
+    [ngClass]="{ 'image-active': selectedIndex === i }"
+  />
+  }
+
+  <div class="carousel-dot-container">
+    @for(image of images; track image.imageAlt; let i = $index){
+    <span
+      (click)="selectImage(i)"
+      class="dot"
+      [ngClass]="{ active: selectedIndex === i }"
+    ></span>
+    }
+  </div>
+
+  <button class="btn-carousel btn-prev">
+    <i
+      class="fas fa-arrow-circle-left icon-carousel icon-prev"
+      (click)="onPrevClick()"
+    ></i>
+  </button>
+
+  <button class="btn-carousel btn-next">
+    <i
+      class="fas fa-arrow-circle-right icon-carousel icon-next"
+      (click)="onNextClick()"
+    ></i>
+  </button>
+</div>

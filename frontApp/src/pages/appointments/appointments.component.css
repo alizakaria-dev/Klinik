@@ -1,0 +1,14 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  max-width: 75%;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 10rem auto;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 1rem;
+}

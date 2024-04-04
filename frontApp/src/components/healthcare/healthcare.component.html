@@ -1,0 +1,28 @@
+<section class="healthcare-section">
+  <div class="title-container">
+    <p class="section-title">Services</p>
+    <h1 class="services-heading">Health Care Solutions</h1>
+  </div>
+  <div class="services container">
+    @if(services === undefined || services.length == 0){
+
+    <h1>No services found</h1>
+
+    }@else { @for(service of services; track service.SERVICEID) {
+
+    <div class="service">
+      <app-icon
+        [icon]="service.ICON"
+        [iconContainerSize]="'icon-container-lg'"
+        [iconSize]="'icon-lg'"
+      ></app-icon>
+      <h4>{{ service.TITLE }}</h4>
+      <p>{{ service.TEXT }}</p>
+      <div class="read-more">
+        <div class="plus-sign"><i class="fa fa-plus"></i></div>
+        <p class="read-more-text">Read More</p>
+      </div>
+    </div>
+    } }
+  </div>
+</section>

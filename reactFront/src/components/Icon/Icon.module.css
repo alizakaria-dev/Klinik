@@ -1,0 +1,36 @@
+.iconContainer {
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i {
+  color: #0463fa;
+}
+
+.iconLg {
+  font-size: 2.5rem;
+}
+
+.iconMd {
+  font-size: 1.5rem;
+}
+
+.iconContainerLg {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.iconContainerMd {
+  width: 5rem;
+  height: 5rem;
+}
+
+.pointerCursor {
+}
+
+.pointerCursor:hover {
+  cursor: pointer;
+}

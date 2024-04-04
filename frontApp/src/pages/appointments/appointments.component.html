@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Name</th>
+      <th>Mobile</th>
+      <th>Email</th>
+      <th>Doctor</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(appointment of appointments; track appointment.APPOINTMENTID){
+    <tr>
+      <td>{{ appointment.DATE }}</td>
+      <td>{{ appointment.TIME }}</td>
+      <td>{{ appointment.NAME }}</td>
+      <td>{{ appointment.MOBILE }}</td>
+      <td>{{ appointment.EMAIL }}</td>
+      <td>{{ appointment.DOCTOR }}</td>
+      <td>{{ appointment.DESCRIPTION }}</td>
+    </tr>
+    }
+  </tbody>
+</table>

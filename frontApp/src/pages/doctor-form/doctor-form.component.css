@@ -1,0 +1,25 @@
+.form {
+  max-width: 80rem;
+  background-color: #eff5ff;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+.form-container {
+  background-color: #eff5ff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem;
+}
+
+.book-appointment-btn {
+  background-color: #0463fa;
+  padding: 1.6rem 1.2rem;
+  border-radius: 7px;
+  grid-column: 1/-1;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
